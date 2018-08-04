@@ -12,7 +12,8 @@
 		B53B8747211352B700FAB8B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53B8745211352B700FAB8B9 /* Main.storyboard */; };
 		B53B8749211352BA00FAB8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53B8748211352BA00FAB8B9 /* Assets.xcassets */; };
 		B53B874C211352BA00FAB8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53B874A211352BA00FAB8B9 /* LaunchScreen.storyboard */; };
-		B53B8757211352BB00FAB8B9 /* SecretNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B8756211352BB00FAB8B9 /* SecretNumberTests.swift */; };
+		B53B8757211352BB00FAB8B9 /* GameControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B8756211352BB00FAB8B9 /* GameControllerTests.swift */; };
+		B53B87622113621900FAB8B9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B87612113621900FAB8B9 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		B53B874B211352BA00FAB8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53B874D211352BA00FAB8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B53B8752211352BB00FAB8B9 /* SecretNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B53B8756211352BB00FAB8B9 /* SecretNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretNumberTests.swift; sourceTree = "<group>"; };
+		B53B8756211352BB00FAB8B9 /* GameControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerTests.swift; sourceTree = "<group>"; };
 		B53B8758211352BB00FAB8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B53B87612113621900FAB8B9 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				B53B8741211352B700FAB8B9 /* AppDelegate.swift */,
-				B53B8743211352B700FAB8B9 /* ViewController.swift */,
+				B53B87612113621900FAB8B9 /* GameController.swift */,
 				B53B8745211352B700FAB8B9 /* Main.storyboard */,
+				B53B8743211352B700FAB8B9 /* ViewController.swift */,
 				B53B8748211352BA00FAB8B9 /* Assets.xcassets */,
 				B53B874A211352BA00FAB8B9 /* LaunchScreen.storyboard */,
 				B53B874D211352BA00FAB8B9 /* Info.plist */,
@@ -90,7 +93,7 @@
 		B53B8755211352BB00FAB8B9 /* SecretNumberTests */ = {
 			isa = PBXGroup;
 			children = (
-				B53B8756211352BB00FAB8B9 /* SecretNumberTests.swift */,
+				B53B8756211352BB00FAB8B9 /* GameControllerTests.swift */,
 				B53B8758211352BB00FAB8B9 /* Info.plist */,
 			);
 			path = SecretNumberTests;
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53B8744211352B700FAB8B9 /* ViewController.swift in Sources */,
+				B53B87622113621900FAB8B9 /* GameController.swift in Sources */,
 				B53B8742211352B700FAB8B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B53B8757211352BB00FAB8B9 /* SecretNumberTests.swift in Sources */,
+				B53B8757211352BB00FAB8B9 /* GameControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
