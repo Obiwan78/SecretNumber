@@ -12,36 +12,45 @@ class ViewController: UIViewController {
     
     let _gameController = GameController()
     
-    static let BORDER_MARGIN:CGFloat = 15.0
+//    static let BORDER_MARGIN:CGFloat = 15.0
     var _gameRangeToScreenRatio:CGFloat = 1
+    @IBOutlet weak var ui_principalView: UIView!
+    @IBOutlet weak var ui_firstVerticalStackView: UIStackView!
     
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
     @IBOutlet weak var ui_levelSegmentedControl: UISegmentedControl!
     @IBOutlet weak var ui_newGameButton: UIButton!
+    
+    @IBOutlet weak var ui_horizontalCheckStackView: UIStackView!
     @IBOutlet weak var ui_guessedValueField: UITextField!
     @IBOutlet weak var ui_checkButton: UIButton!
     
+
+    @IBOutlet weak var ui_boundaryPrincipalView: UIView!
     @IBOutlet weak var ui_boundaryZone: UIView!
+    @IBOutlet weak var ui_boundaryBarView: UIView!
     @IBOutlet weak var ui_lowBoundarieLabel: UILabel!
     @IBOutlet weak var ui_highBoundarieLabel: UILabel!
     
-    @IBOutlet weak var cs_boundarieZoneLeading: NSLayoutConstraint!{
-        didSet {
-            cs_boundarieZoneLeading.constant = ViewController.BORDER_MARGIN
-        }
-    }
+    @IBOutlet weak var cs_boundarieZoneLeading: NSLayoutConstraint!
+//  {
+//        didSet {
+//            cs_boundarieZoneLeading.constant = ViewController.BORDER_MARGIN
+//        }
+//    }
     
-    @IBOutlet weak var cs_boundarieZoneTrailing: NSLayoutConstraint! {
-        didSet {
-        cs_boundarieZoneTrailing.constant = ViewController.BORDER_MARGIN
-        }
-    }
+    @IBOutlet weak var cs_boundarieZoneTrailing: NSLayoutConstraint!
+    //{
+//        didSet {
+//        cs_boundarieZoneTrailing.constant = ViewController.BORDER_MARGIN
+//        }
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        allIsHiddenDisplay()
-        ui_boundaryZone.isHidden = true
+        ui_boundaryPrincipalView.isHidden = true
         updateDisplay()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -54,7 +63,9 @@ class ViewController: UIViewController {
     
     
     override func viewWillLayoutSubviews() {
-        let barwidth: CGFloat =  self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right - 2 * ViewController.BORDER_MARGIN
+//        let barwidth: CGFloat =  self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right - 2 * ViewController.BORDER_MARGIN
+//        let barwidth: CGFloat =  self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right
+        let barwidth: CGFloat = self.ui_boundaryPrincipalView.bounds.width
         _gameRangeToScreenRatio = barwidth / CGFloat(GameController.MAX_VALUE - GameController.MIN_VALUE)
         // MAJ des contraintes avec mode paysage et portrait
         updateDisplay()
@@ -64,7 +75,7 @@ class ViewController: UIViewController {
     
     @IBAction func ui_NewGameButtonTouched() {
         let levelGame:Int = ui_levelSegmentedControl.selectedSegmentIndex
-        print("Boundaries : \(ui_lowBoundarieLabel) / \(ui_highBoundarieLabel)")
+//        print("Boundaries : \(ui_lowBoundarieLabel) / \(ui_highBoundarieLabel)")
         _gameController.startNewGame(withLevel: levelGame)
 
         updateDisplay()
@@ -101,22 +112,22 @@ class ViewController: UIViewController {
         updateDisplay()
     }
     
-    func allIsHiddenDisplay() {
-        ui_gameStatusLabel.isHidden = true
-        ui_levelSegmentedControl.isHidden = true
-        ui_newGameButton.isHidden = true
-        ui_boundaryZone.isHidden = true
-        ui_guessedValueField.isHidden = true
-        ui_checkButton.isHidden = true
-    }
-    
+//    func allIsHiddenDisplay() {
+//        ui_gameStatusLabel.isHidden = true
+//        ui_levelSegmentedControl.isHidden = true
+//        ui_newGameButton.isHidden = true
+//        ui_boundaryZone.isHidden = true
+//        ui_guessedValueField.isHidden = true
+//        ui_checkButton.isHidden = true
+//    }
+//
     
     func updateDisplay() {
         // PARTIE EN COURS :
         if _gameController.isGameInProgress {
-            if ui_boundaryZone.isHidden != false { // Si la vue n'était pas encore visible alors ...
-                UIView.transition(with: ui_boundaryZone, duration: 0.7, options: [.transitionCurlDown], animations: {
-                    self.ui_boundaryZone.isHidden = false
+            if ui_boundaryPrincipalView.isHidden != false { // Si la vue n'était pas encore visible alors ...
+                UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlDown], animations: {
+                    self.ui_boundaryPrincipalView.isHidden = false
                 }, completion: nil)
                 ui_newGameButton.isHidden = true
                 ui_levelSegmentedControl.isHidden = true
@@ -134,9 +145,9 @@ class ViewController: UIViewController {
             ui_lowBoundarieLabel.text = String(_gameController.lowBoundary)
             ui_highBoundarieLabel.text = String(_gameController.highBoundary)
             
-            // Modifications des constraintes avec les checks
-            cs_boundarieZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(GameController.MIN_VALUE + _gameController.lowBoundary) * _gameRangeToScreenRatio
-            cs_boundarieZoneTrailing.constant = ViewController.BORDER_MARGIN + CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * _gameRangeToScreenRatio
+            // Modifications des constraintes avec les checks. On ajoutait ViewController.BORDER_MARGIN + ...
+            cs_boundarieZoneLeading.constant = CGFloat(GameController.MIN_VALUE + _gameController.lowBoundary) * _gameRangeToScreenRatio
+            cs_boundarieZoneTrailing.constant = CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * _gameRangeToScreenRatio
             
 //            print("Bounds width iOS = \(self.view.bounds.width)")
 //            print("Bounds width SafeArea = \(self.view.safeAreaInsets.left)\n")
@@ -151,9 +162,9 @@ class ViewController: UIViewController {
         // PARTIE TERMINE ou DEBUT :
         {
             // Si on est en partie (fin de partie):
-            if ui_boundaryZone.isHidden != true {
-                UIView.transition(with: ui_boundaryZone, duration: 0.7, options: [.transitionCurlUp], animations: {
-                    self.ui_boundaryZone.isHidden = true
+            if ui_boundaryPrincipalView.isHidden != true {
+                UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlUp], animations: {
+                    self.ui_boundaryPrincipalView.isHidden = true
                 }, completion: nil)
             }
             
