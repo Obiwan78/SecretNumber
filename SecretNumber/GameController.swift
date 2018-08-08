@@ -11,13 +11,18 @@ import Foundation
 
 class GameController {
 
-    static let MIN_VALUE = 0
-    static let MAX_VALUE = 100
-    private var _secretNumber: Int?
-    private var _lastGuessedValue: Int?
+    static let MIN_VALUE:Int = 0
+    static var MAX_VALUE:Int = 100
+
     private var _lowBoundary: Int = GameController.MIN_VALUE
     private var _highBoundary: Int = GameController.MAX_VALUE
-
+//    private var  MIN_VALUE = 0
+//    private var  MAX_VALUE = 100
+    private var _secretNumber: Int?
+    private var _lastGuessedValue: Int?
+    
+    var countCheck:Int = 0
+    
     var lowBoundary: Int {
         return _lowBoundary
     }
@@ -36,12 +41,20 @@ class GameController {
         return _lastGuessedValue == nil || _lastGuessedValue! != secretNumber //return true
     }
     
-    func startNewGame(withSecretNumber secretNumber: Int? = nil) {
+    func startNewGame(withLevel level:Int?=1, withSecretNumber secretNumber: Int? = nil) {
+        _lowBoundary = 0
+        countCheck = 0
+        print("New Game with level \(String(describing: level))")
+        switch level {
+            case 0:  _highBoundary = 100
+            case 1:  _highBoundary = 200
+            case 2:  _highBoundary = 500
+            default: _highBoundary = 100
+        }
+        
         if secretNumber != nil {
             _secretNumber = secretNumber
         } else {
-//            _secretNumber = 50
-            _lastGuessedValue = 10
             let minSecretNumber = lowBoundary
             let maxSecretNumber = highBoundary
             _secretNumber = minSecretNumber + Int(arc4random_uniform(UInt32(maxSecretNumber-minSecretNumber)))
@@ -52,11 +65,11 @@ class GameController {
     
     func checkGuessedValue(_ value: Int) {
         guard let secretNumber = _secretNumber else { return }
-//        self.secretNumber // le secretNumber de var ligne 28
+//        self.secretNumber // le secretNumber de var ligne 32
         _lastGuessedValue = value
         
         if secretNumber != value {
-
+            countCheck = countCheck + 1
             if value < secretNumber {
                 _lowBoundary = max(_lowBoundary, value)
                 print("c'est plut haut")
@@ -65,7 +78,7 @@ class GameController {
                 print("C'est plus bas")
             }
         } else {
-            print("Bravo")
+            print("Bravo vous avez trouver en \(countCheck) coups.")
         }
         
     }
