@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,32 +15,29 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="120616_setup_astro_800_22" translatesAutoresizingMaskIntoConstraints="NO" id="1hq-k0-cj9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fond_bague" translatesAutoresizingMaskIntoConstraints="NO" id="rAP-64-RMO">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Jeu du nombre secret" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1E-Dt-kZ1">
-                                <rect key="frame" x="16" y="36" width="382" height="684"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trouvez le nombre secret ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1E-Dt-kZ1">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
                                 <color key="textColor" red="1" green="0.25522911329999998" blue="0.30426560870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.74908566470000004" green="0.76863253119999997" blue="0.79203587769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
-                            <constraint firstItem="1hq-k0-cj9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GwM-C1-gtk"/>
-                            <constraint firstItem="O1E-Dt-kZ1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KrH-J6-4Cn"/>
-                            <constraint firstItem="O1E-Dt-kZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LGx-sV-EQg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O1E-Dt-kZ1" secondAttribute="bottom" constant="16" id="S46-3W-wP9"/>
-                            <constraint firstItem="1hq-k0-cj9" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="V2E-NB-DO3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O1E-Dt-kZ1" secondAttribute="trailing" constant="16" id="XED-dM-nvx"/>
-                            <constraint firstAttribute="bottom" secondItem="1hq-k0-cj9" secondAttribute="bottom" id="ZKp-nB-xDC"/>
-                            <constraint firstItem="1hq-k0-cj9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Zvy-94-dlM"/>
-                            <constraint firstItem="1hq-k0-cj9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f0R-jO-luE"/>
-                            <constraint firstItem="O1E-Dt-kZ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gcM-dq-2Bj"/>
-                            <constraint firstAttribute="trailing" secondItem="1hq-k0-cj9" secondAttribute="trailing" id="hBh-xN-F9d"/>
+                            <constraint firstItem="rAP-64-RMO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FdF-BO-Ekb"/>
+                            <constraint firstItem="O1E-Dt-kZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LGx-sV-EQg"/>
+                            <constraint firstItem="rAP-64-RMO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pm4-KR-o3Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O1E-Dt-kZ1" secondAttribute="bottom" id="S46-3W-wP9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O1E-Dt-kZ1" secondAttribute="trailing" id="XED-dM-nvx"/>
+                            <constraint firstItem="O1E-Dt-kZ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gcM-dq-2Bj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rAP-64-RMO" secondAttribute="bottom" id="jqn-hS-Ezq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rAP-64-RMO" secondAttribute="trailing" id="ooY-th-9uq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -51,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="120616_setup_astro_800_22" width="200" height="266"/>
+        <image name="fond_bague" width="720" height="720"/>
     </resources>
 </document>

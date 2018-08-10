@@ -14,6 +14,7 @@
 		B53B874C211352BA00FAB8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53B874A211352BA00FAB8B9 /* LaunchScreen.storyboard */; };
 		B53B8757211352BB00FAB8B9 /* GameControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B8756211352BB00FAB8B9 /* GameControllerTests.swift */; };
 		B53B87622113621900FAB8B9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B87612113621900FAB8B9 /* GameController.swift */; };
+		B580F70A211B6AD5009BEE8F /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580F709211B6AD5009BEE8F /* IntExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		B53B8756211352BB00FAB8B9 /* GameControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerTests.swift; sourceTree = "<group>"; };
 		B53B8758211352BB00FAB8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B53B87612113621900FAB8B9 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		B580F709211B6AD5009BEE8F /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = Extensions/IntExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +83,12 @@
 			children = (
 				B53B8741211352B700FAB8B9 /* AppDelegate.swift */,
 				B53B87612113621900FAB8B9 /* GameController.swift */,
-				B53B8745211352B700FAB8B9 /* Main.storyboard */,
 				B53B8743211352B700FAB8B9 /* ViewController.swift */,
+				B53B8745211352B700FAB8B9 /* Main.storyboard */,
 				B53B8748211352BA00FAB8B9 /* Assets.xcassets */,
 				B53B874A211352BA00FAB8B9 /* LaunchScreen.storyboard */,
 				B53B874D211352BA00FAB8B9 /* Info.plist */,
+				B580F709211B6AD5009BEE8F /* IntExtension.swift */,
 			);
 			path = SecretNumber;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53B8744211352B700FAB8B9 /* ViewController.swift in Sources */,
+				B580F70A211B6AD5009BEE8F /* IntExtension.swift in Sources */,
 				B53B87622113621900FAB8B9 /* GameController.swift in Sources */,
 				B53B8742211352B700FAB8B9 /* AppDelegate.swift in Sources */,
 			);

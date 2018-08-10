@@ -16,8 +16,7 @@ class GameController {
 
     private var _lowBoundary: Int = GameController.MIN_VALUE
     private var _highBoundary: Int = GameController.MAX_VALUE
-//    private var  MIN_VALUE = 0
-//    private var  MAX_VALUE = 100
+
     private var _secretNumber: Int?
     private var _lastGuessedValue: Int?
     
@@ -41,24 +40,31 @@ class GameController {
         return _lastGuessedValue == nil || _lastGuessedValue! != secretNumber //return true
     }
     
+    
+    //-------------------------------------------------
+    // FONCTIONS
+    //-------------------------------------------------
+    
     func startNewGame(withLevel level:Int?=1, withSecretNumber secretNumber: Int? = nil) {
-        _lowBoundary = 0
         countCheck = 0
-        print("New Game with level \(String(describing: level))")
+        _lowBoundary = 0
         switch level {
-            case 0:  _highBoundary = 100
-            case 1:  _highBoundary = 200
-            case 2:  _highBoundary = 500
+            case 0: _highBoundary = 100
+                    GameController.MAX_VALUE = 100
+            case 1: _highBoundary = 500
+                    GameController.MAX_VALUE = 500
+            case 2: _highBoundary = 1000
+                    GameController.MAX_VALUE = 1000
             default: _highBoundary = 100
+                GameController.MAX_VALUE = 100
         }
+        print("----------------\nNew Game with level \(String(describing: level)),\n lowBoundary = \(_lowBoundary), MIN_VALUE = \(GameController.MIN_VALUE),\n highBoundary = \(_highBoundary), MAX_VALUE = \(GameController.MAX_VALUE)\n")
         
         if secretNumber != nil {
             _secretNumber = secretNumber
         } else {
-            let minSecretNumber = lowBoundary
-            let maxSecretNumber = highBoundary
-            _secretNumber = minSecretNumber + Int(arc4random_uniform(UInt32(maxSecretNumber-minSecretNumber)))
-            print("le nombre mistère est \(String(describing: _secretNumber))")
+            _secretNumber = Int(withRandomNumberBetween: lowBoundary, and: highBoundary)
+            print("Le nombre mistère est \(String(describing: _secretNumber))\n----------------\n")
         }
         
     }
@@ -67,9 +73,8 @@ class GameController {
         guard let secretNumber = _secretNumber else { return }
 //        self.secretNumber // le secretNumber de var ligne 32
         _lastGuessedValue = value
-        
+        countCheck = countCheck + 1
         if secretNumber != value {
-            countCheck = countCheck + 1
             if value < secretNumber {
                 _lowBoundary = max(_lowBoundary, value)
                 print("c'est plut haut")
@@ -79,6 +84,8 @@ class GameController {
             }
         } else {
             print("Bravo vous avez trouver en \(countCheck) coups.")
+            // Il faut enlever le clavier qui reste apparent.
+
         }
         
     }

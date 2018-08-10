@@ -39,7 +39,7 @@ class GameControllerTests: XCTestCase {
     func testBoundaries() {
         let gameController = GameController()
         
-        gameController.startNewGame(withSecretNumber: 55)
+        gameController.startNewGame(withLevel: 0, withSecretNumber: 55) // New game level 0 (0-100)
         XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary)
         XCTAssertEqual(GameController.MAX_VALUE, gameController.highBoundary)
         
@@ -58,6 +58,18 @@ class GameControllerTests: XCTestCase {
         gameController.checkGuessedValue(60)
         XCTAssertEqual(45, gameController.lowBoundary)
         XCTAssertEqual(60, gameController.highBoundary)
+        
+        gameController.startNewGame(withLevel: 0, withSecretNumber: 55) // New game level 0 (0-100)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 0(0-100), boundaries should have benn reinitialized")
+        
+        gameController.startNewGame(withLevel: 1, withSecretNumber: 55) // New game level 1 (0-500)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 1(0-500), boundaries should have benn reinitialized")
+        
+        gameController.startNewGame(withLevel: 2, withSecretNumber: 55) // New game level 2 (0-1000)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 2(0-1000), boundaries should have benn reinitialized")
     }
     
     
