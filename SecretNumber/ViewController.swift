@@ -157,7 +157,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlDown], animations: {
                     self.ui_boundaryPrincipalView.isHidden = false
                 }, completion: nil)
-                ui_newGameButton.isHidden = false
+                ui_newGameButton.isHidden = true
                 ui_levelSegmentedControl.isHidden = true
                 ui_guessedValueField.isHidden = false
                 ui_checkButton.isHidden = false
