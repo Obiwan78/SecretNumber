@@ -12,7 +12,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let _gameController = GameController()
     var barwidth: CGFloat = 0
-//    static let BORDER_MARGIN:CGFloat = 15.0
+
+    var _count = 0
+    var _timer = Timer()
+    
     var _gameRangeToScreenRatio:CGFloat = 1
     @IBOutlet weak var ui_principalView: UIView!
     @IBOutlet weak var ui_firstVerticalStackView: UIStackView!
@@ -24,26 +27,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ui_guessedValueField: UITextField!
     @IBOutlet weak var ui_checkButton: UIButton!
     
-
     @IBOutlet weak var ui_boundaryPrincipalView: UIView!
-//    @IBOutlet weak var ui_boundaryZone: UIView!
     @IBOutlet weak var ui_boundaryBarView: UIView!
     @IBOutlet weak var ui_lowBoundarieLabel: UILabel!
     @IBOutlet weak var ui_highBoundarieLabel: UILabel!
-    
     @IBOutlet weak var cs_boundarieZoneLeading: NSLayoutConstraint!
-//  {
-//        didSet {
-//            cs_boundarieZoneLeading.constant = ViewController.BORDER_MARGIN
-//        }
-//    }
-    
     @IBOutlet weak var cs_boundarieZoneTrailing: NSLayoutConstraint!
-    //{
-//        didSet {
-//        cs_boundarieZoneTrailing.constant = ViewController.BORDER_MARGIN
-//        }
-//    }
+    
+    @IBOutlet weak var ui_counterLabel: UILabel!
     
     
     //-------------------------------------------------
@@ -54,6 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 //        allIsHiddenDisplay()
         ui_boundaryPrincipalView.isHidden = true
+        ui_counterLabel.isHidden = true
         updateDisplay()
     }
     
@@ -108,11 +100,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func ui_NewGameButtonTouched() {
         let levelGame:Int = ui_levelSegmentedControl.selectedSegmentIndex
-//        print("Boundaries : \(ui_lowBoundarieLabel) / \(ui_highBoundarieLabel)")
+        _count = 0
         _gameController.startNewGame(withLevel: levelGame)
-
+        _timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
         updateDisplay()
-        
     }
     
     
@@ -152,7 +143,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func updateDisplay() {
         // PARTIE EN COURS :
-        if _gameController.isGameInProgress {
+        if _gameController.isGameInProgress == true {
+            ui_counterLabel.isHidden = false
+
+//            _timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
             if ui_boundaryPrincipalView.isHidden != false { // Si la vue n'était pas encore visible alors ...
                 UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlDown], animations: {
                     self.ui_boundaryPrincipalView.isHidden = false
@@ -163,7 +157,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 ui_checkButton.isHidden = false
                 ui_gameStatusLabel.isHidden = false
                 ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
-                
+                ui_counterLabel.isHidden = false
+
                 UIView.animate(withDuration: 0.4, animations: { // anime tous les changements de layout
                     self.view.layoutIfNeeded()
                 })
@@ -187,24 +182,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         } else
             
-        // PARTIE TERMINE ou DEBUT :
+        // PARTIE TERMINE ou DEBUT : _gameController.isGameInProgress == false
         {
-            // Si on est en partie (fin de partie):
-            if ui_boundaryPrincipalView.isHidden != true {
+            // on cache ui_boundaryPrincipalView (aide barre horizontale):
+            if ui_boundaryPrincipalView.isHidden != true { // = visible
                 UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlUp], animations: {
                     self.ui_boundaryPrincipalView.isHidden = true
                 }, completion: nil)
             }
             
-            // Sinon c'est qu'on est PLUS EN PARTIE : ui_boundaryZone.isHidden = true
             if _gameController.countCheck >= 1 {
-                ui_gameStatusLabel.text = "Bravo, vous avez trouvé en \(_gameController.countCheck) coups"
+                ui_gameStatusLabel.text = "Choississez le niveau entre :"
+                ui_counterLabel.text = "Bravo, vous avez trouvé en \(_gameController.countCheck) coups et en \(_count) secondes"
+                _timer.invalidate()
+//                _count = 0
             } else
             {
                 ui_gameStatusLabel.text = "Choississez le niveau entre :"
+                _count = 0
+//                ui_counterLabel.text = "00"
             }
             
             // ANIMATIONS DES VUES :
+            ui_counterLabel.isHidden = false
             ui_boundaryPrincipalView.isHidden = true
             ui_newGameButton.isHidden = false
             ui_levelSegmentedControl.isHidden = false
@@ -216,6 +216,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @objc func counter() {
+        _count += 1
+        ui_counterLabel.text = "\(_count)"
+    }
 
     
 }
