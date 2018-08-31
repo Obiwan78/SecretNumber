@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = "XCheck"; ObjectID = "2Yh-zd-bRC"; */
+"2Yh-zd-bRC.text" = "XCoups";
+
+/* Class = "UILabel"; text = "ckecks"; ObjectID = "7cH-Zf-SeD"; */
+"7cH-Zf-SeD.text" = "coups";
+
+/* Class = "UISegmentedControl"; 81I-wk-G3f.segmentTitles[0] = "0 - 100"; ObjectID = "81I-wk-G3f"; */
+"81I-wk-G3f.segmentTitles[0]" = "0 - 100";
+
+/* Class = "UISegmentedControl"; 81I-wk-G3f.segmentTitles[1] = "0 - 500"; ObjectID = "81I-wk-G3f"; */
+"81I-wk-G3f.segmentTitles[1]" = "0 - 500";
+
+/* Class = "UISegmentedControl"; 81I-wk-G3f.segmentTitles[2] = "0 - 1000"; ObjectID = "81I-wk-G3f"; */
+"81I-wk-G3f.segmentTitles[2]" = "0 - 1000";
+
+/* Class = "UINavigationItem"; title = "Secret Number"; ObjectID = "AKB-Uk-8rg"; */
+"AKB-Uk-8rg.title" = "Le Nombre Secret";
+
+/* Class = "UILabel"; text = "Great, you found it in :"; ObjectID = "AMn-1w-QIz"; */
+"AMn-1w-QIz.text" = "Bravo, trouvé en :";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Ave-qM-csT"; */
+"Ave-qM-csT.text" = "0";
+
+/* Class = "UILabel"; text = "in only :"; ObjectID = "BUE-Jk-4rB"; */
+"BUE-Jk-4rB.text" = "en seulement :";
+
+/* Class = "UIButton"; normalTitle = "VERIFY"; ObjectID = "CGT-Jo-Xn0"; */
+"CGT-Jo-Xn0.normalTitle" = "VERIFIER";
+
+/* Class = "UILabel"; text = "Chronometer"; ObjectID = "EOv-yN-xFD"; */
+"EOv-yN-xFD.text" = "Chronomètre";
+
+/* Class = "UILabel"; text = "Choose the level between :"; ObjectID = "EpP-RJ-FIS"; */
+"EpP-RJ-FIS.text" = "Choisissez la difficulté entre :";
+
+/* Class = "UILabel"; text = "Find the Secret Number"; ObjectID = "Euq-Pc-Bck"; */
+"Euq-Pc-Bck.text" = "Trouver le nombre secret";
+
+/* Class = "UINavigationItem"; title = "Informations"; ObjectID = "Iuk-2e-bhw"; */
+"Iuk-2e-bhw.title" = "Informations";
+
+/* Class = "UITextField"; placeholder = "Enter a number"; ObjectID = "LBI-Xk-5vO"; */
+"LBI-Xk-5vO.placeholder" = "Entrer un nombre";
+
+/* Class = "UIButton"; normalTitle = "Send us a email"; ObjectID = "ah2-GJ-cZC"; */
+"ah2-GJ-cZC.normalTitle" = "Envoyez-nous un mail";
+
+/* Class = "UIButton"; normalTitle = "NEW GAME"; ObjectID = "fyv-Hx-rH0"; */
+"fyv-Hx-rH0.normalTitle" = "NOUVELLE PARTIE";
+
+/* Class = "UILabel"; text = " Yseconds"; ObjectID = "hOs-8j-gz6"; */
+"hOs-8j-gz6.text" = "secondes";
+
+/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "jRl-py-hHi"; */
+"jRl-py-hHi.text" = "A. BERNARD @2018";
+
+/* Class = "UIBarButtonItem"; title = "Apps"; ObjectID = "ngt-sk-tp2"; */
+"ngt-sk-tp2.title" = "Apps";
+
+/* Class = "UILabel"; text = "We are very happy to know that you have downloaded our SIMPLE CALC application and we warmly thank you.\n\nWe also want to hear your feedback to improve this calculator.\n\nTo do this :"; ObjectID = "ohS-Gg-qcC"; */
+"ohS-Gg-qcC.text" = "Nous sommes très heureux que vous ayez téléchargé notre application\n\n>> LE NOMBRE SECRET <<\n\net nous vous remercions chaleureusement..\n\Nous souhaitons également avoir vos commentaires pour améliorer cette calculatrice.\n\nPour ce faire :";
+
+/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "vzk-qB-TPg"; */
+"vzk-qB-TPg.text" = "A. BERNARD @2018";
+
+/* Class = "UIBarButtonItem"; title = "Infos"; ObjectID = "ySf-uo-pMu"; */
+"ySf-uo-pMu.title" = "Infos";
+
+/* Class = "UILabel"; text = "seconds"; ObjectID = "zEt-Wc-DWh"; */
+"zEt-Wc-DWh.text" = "secondes";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "zPA-7x-sA7"; */
+"zPA-7x-sA7.text" = "100";

@@ -58,13 +58,13 @@ class GameController {
             default: _highBoundary = 100
                 GameController.MAX_VALUE = 100
         }
-        print("----------------\nNew Game with level \(String(describing: level)),\n lowBoundary = \(_lowBoundary), MIN_VALUE = \(GameController.MIN_VALUE),\n highBoundary = \(_highBoundary), MAX_VALUE = \(GameController.MAX_VALUE)\n")
+        print("----------------------------------------\nNew Game with level \(String(describing: level)),\n lowBoundary = \(_lowBoundary), MIN_VALUE = \(GameController.MIN_VALUE),\n highBoundary = \(_highBoundary), MAX_VALUE = \(GameController.MAX_VALUE)\n")
         
         if secretNumber != nil {
             _secretNumber = secretNumber
         } else {
             _secretNumber = Int(withRandomNumberBetween: lowBoundary, and: highBoundary)
-            print("Le nombre mistère est \(String(describing: _secretNumber))\n----------------\n")
+            print("Le nombre mistère est \(String(describing: _secretNumber)))\n----------------------------------------\n")
         }
         
     }
