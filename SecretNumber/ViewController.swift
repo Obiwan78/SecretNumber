@@ -154,19 +154,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlDown], animations: {
                     self.ui_boundaryPrincipalView.isHidden = false
                 }, completion: nil)
-                ui_gameStatusLabel.isHidden = true
-                ui_levelSegmentedControl.isHidden = true
-                ui_resultView.isHidden = true
-                ui_newGameButton.isHidden = true
-                ui_checkAndVerifyView.isHidden = false
-//                ui_guessedValueField.isHidden = false
-//                ui_checkButton.isHidden = false
-                ui_counterLabel.isHidden = false
-                UIView.animate(withDuration: 0.4, animations: { // anime tous les changements de layout
-                    self.view.layoutIfNeeded()
-                })
             }
-            
+            ui_checkAndVerifyView.isHidden = false
+            ui_gameStatusLabel.isHidden = true
+            ui_levelSegmentedControl.isHidden = true
+            ui_resultView.isHidden = true
+            ui_newGameButton.isHidden = true
+            ui_guessedValueField.isHidden = false
+            ui_checkButton.isHidden = false
+            UIView.animate(withDuration: 0.4, animations: { // anime tous les changements de layout
+                self.view.layoutIfNeeded()
+            })
             // Affichage des valeurs Min et Max / Check
             ui_lowBoundarieLabel.text = String(_gameController.lowBoundary)
             ui_highBoundarieLabel.text = String(_gameController.highBoundary)
