@@ -45,25 +45,31 @@
 "LBI-Xk-5vO.placeholder" = "Entrer un nombre";
 
 /* Class = "UIButton"; normalTitle = "Send us a email"; ObjectID = "ah2-GJ-cZC"; */
-"ah2-GJ-cZC.normalTitle" = "Envoyez-nous un mail";
+"ah2-GJ-cZC.normalTitle" = "M'envoyer un email";
+
+/* Class = "UIButton"; normalTitle = "My other applications"; ObjectID = "mBu-Jx-rNS"; */
+"mBu-Jx-rNS.normalTitle" = "Voir mes autres applications";
 
 /* Class = "UIButton"; normalTitle = "NEW GAME"; ObjectID = "fyv-Hx-rH0"; */
 "fyv-Hx-rH0.normalTitle" = "NOUVELLE PARTIE";
 
+/* Class = "UIButton"; normalTitle = "STOP GAME"; ObjectID = "08G-WR-yYn"; */
+"08G-WR-yYn.normalTitle" = "ARRETER LA PARTIE";
+
 /* Class = "UILabel"; text = " Yseconds"; ObjectID = "hOs-8j-gz6"; */
 "hOs-8j-gz6.text" = "secondes";
 
-/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "jRl-py-hHi"; */
-"jRl-py-hHi.text" = "A. BERNARD @2018";
+/* Class = "UILabel"; text = "@ Alban BERNARD - 2018"; ObjectID = "jRl-py-hHi"; */
+"jRl-py-hHi.text" = "@ Alban BERNARD - 2018";
 
 /* Class = "UIBarButtonItem"; title = "Apps"; ObjectID = "ngt-sk-tp2"; */
 "ngt-sk-tp2.title" = "Apps";
 
-/* Class = "UILabel"; text = "We are very happy to know that you have downloaded our SIMPLE CALC application and we warmly thank you.\n\nWe also want to hear your feedback to improve this calculator.\n\nTo do this :"; ObjectID = "ohS-Gg-qcC"; */
-"ohS-Gg-qcC.text" = "Nous sommes très heureux que vous ayez téléchargé notre application\n\n>> LE NOMBRE SECRET <<\n\net nous vous remercions chaleureusement..\n\Nous souhaitons également avoir vos commentaires pour améliorer cette calculatrice.\n\nPour ce faire :";
+/* Class = "UILabel"; text = "I am very happy to know that you have downloaded my application.\n\n --- >> SECRET NUMBER << ---- \n\n and I thank you very warmly. \n\n I would sincerely appreciate receiving your comments and requests for evolutions for this game. \n\n To do this, you can:"; ObjectID = "ohS-Gg-qcC"; */
+"ohS-Gg-qcC.text" = "Je suis très heureux de savoir que vous avez téléchargé mon application.\n\n--->   LE NOMBRE SECRET   <---\n\net je vous en remercie très chaleureusement.\n\nJ'apprécierais sincèrement de recevoir vos commentaires et demandes d'évolutions pour ce jeux.\n\nPour ce faire, vous pouvez :";
 
-/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "vzk-qB-TPg"; */
-"vzk-qB-TPg.text" = "A. BERNARD @2018";
+/* Class = "UILabel"; text = "@ Alban BERNARD - 2018"; ObjectID = "vzk-qB-TPg"; */
+"vzk-qB-TPg.text" = "@ Alban BERNARD - 2018";
 
 /* Class = "UIBarButtonItem"; title = "Infos"; ObjectID = "ySf-uo-pMu"; */
 "ySf-uo-pMu.title" = "Infos";

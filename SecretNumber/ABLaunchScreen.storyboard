@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qzk-Im-rIw">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LaunchScreen-->
+        <scene sceneID="1N2-DG-Mzh">
+            <objects>
+                <viewController title="LaunchScreen" id="Qzk-Im-rIw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ylc-O3-qP1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecretNumber1024-RougeFond-degrade-4" translatesAutoresizingMaskIntoConstraints="NO" id="Kne-sw-Nyz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecretNumber1024-6-TitreSeul" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-1b-Trn">
+                                <rect key="frame" x="16" y="60" width="343" height="734"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YBD-1b-Trn" firstAttribute="top" secondItem="naT-lc-xa4" secondAttribute="top" constant="16" id="J67-I4-fhw"/>
+                            <constraint firstAttribute="bottom" secondItem="Kne-sw-Nyz" secondAttribute="bottom" id="QyM-ZF-Fj0"/>
+                            <constraint firstItem="Kne-sw-Nyz" firstAttribute="top" secondItem="ylc-O3-qP1" secondAttribute="top" id="UZk-DK-IAR"/>
+                            <constraint firstItem="YBD-1b-Trn" firstAttribute="leading" secondItem="naT-lc-xa4" secondAttribute="leading" constant="16" id="cg8-Qy-bfF"/>
+                            <constraint firstItem="naT-lc-xa4" firstAttribute="trailing" secondItem="YBD-1b-Trn" secondAttribute="trailing" constant="16" id="efs-30-oGT"/>
+                            <constraint firstItem="Kne-sw-Nyz" firstAttribute="leading" secondItem="naT-lc-xa4" secondAttribute="leading" id="mgd-Ha-kCa"/>
+                            <constraint firstItem="Kne-sw-Nyz" firstAttribute="trailing" secondItem="naT-lc-xa4" secondAttribute="trailing" id="vBr-SG-FCm"/>
+                            <constraint firstItem="YBD-1b-Trn" firstAttribute="bottom" secondItem="naT-lc-xa4" secondAttribute="bottom" constant="16" id="z9W-G1-9L9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="naT-lc-xa4"/>
+                    </view>
+                    <connections>
+                        <outlet property="ui_titleImageView" destination="YBD-1b-Trn" id="eDa-18-HPM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjW-pX-JUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="66.502463054187189"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SecretNumber1024-6-TitreSeul" width="1024" height="1024"/>
+        <image name="SecretNumber1024-RougeFond-degrade-4" width="341" height="341"/>
+    </resources>
+</document>

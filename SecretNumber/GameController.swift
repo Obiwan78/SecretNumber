@@ -36,10 +36,15 @@ class GameController {
     
     var isGameInProgress: Bool { // partie en cours si _secretNumber n'a pas été généré et si l'utilisateur n'a pas entré de nombre _lastGuessedValue
         guard let secretNumber = _secretNumber else { return false }
-//        return true
         return _lastGuessedValue == nil || _lastGuessedValue! != secretNumber //return true
     }
     
+    var isStopGame: Bool {
+        if isGameInProgress == true {
+            _lastGuessedValue = secretNumber
+        }
+        return true
+    }
     
     //-------------------------------------------------
     // FONCTIONS
@@ -58,7 +63,7 @@ class GameController {
             default: _highBoundary = 100
                 GameController.MAX_VALUE = 100
         }
-        print("----------------------------------------\nNew Game with level \(String(describing: level)),\n lowBoundary = \(_lowBoundary), MIN_VALUE = \(GameController.MIN_VALUE),\n highBoundary = \(_highBoundary), MAX_VALUE = \(GameController.MAX_VALUE)\n")
+        print("----------------------------------------\nNew Game with level \(String(describing: level)),\n lowBoundary = \(_lowBoundary), MIN_VALUE = \(GameController.MIN_VALUE),\n highBoundary = \(_highBoundary), MAX_VALUE = \(GameController.MAX_VALUE)")
         
         if secretNumber != nil {
             _secretNumber = secretNumber
@@ -69,6 +74,7 @@ class GameController {
         
     }
     
+
     func checkGuessedValue(_ value: Int) {
         guard let secretNumber = _secretNumber else { return }
 //        self.secretNumber // le secretNumber de var ligne 32
@@ -85,7 +91,7 @@ class GameController {
         } else {
             print("Bravo vous avez trouver en \(countCheck) coups.")
             // Il faut enlever le clavier qui reste apparent.
-
+            
         }
         
     }

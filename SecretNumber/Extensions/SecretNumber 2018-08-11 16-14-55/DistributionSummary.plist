@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SecretNumber.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>6D7CE17B25766A48FC9AF514D8B027EF71BD1730</string>
+				<key>dateExpires</key>
+				<string>11/08/2019</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>F743L3UMQG.fr.albanbernard.ios.SecretNumber</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>F743L3UMQG</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>F743L3UMQG.fr.albanbernard.ios.SecretNumber</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>SecretNumber.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>a0ed6834-6eb8-413a-b968-1f0c794e511a</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: fr.albanbernard.ios.SecretNumber</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>F743L3UMQG</string>
+				<key>name</key>
+				<string>Alban BERNARD</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

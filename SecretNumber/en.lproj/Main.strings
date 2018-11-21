@@ -45,25 +45,31 @@
 "LBI-Xk-5vO.placeholder" = "Enter a number";
 
 /* Class = "UIButton"; normalTitle = "Send us a email"; ObjectID = "ah2-GJ-cZC"; */
-"ah2-GJ-cZC.normalTitle" = "Send us a email";
+"ah2-GJ-cZC.normalTitle" = "Send me a email";
+
+/* Class = "UIButton"; normalTitle = "My other applications"; ObjectID = "mBu-Jx-rNS"; */
+"mBu-Jx-rNS.normalTitle" = "See my other applications";
 
 /* Class = "UIButton"; normalTitle = "NEW GAME"; ObjectID = "fyv-Hx-rH0"; */
 "fyv-Hx-rH0.normalTitle" = "NEW GAME";
 
+/* Class = "UIButton"; normalTitle = "STOP GAME"; ObjectID = "08G-WR-yYn"; */
+"08G-WR-yYn.normalTitle" = "STOP GAME";
+
 /* Class = "UILabel"; text = " Yseconds"; ObjectID = "hOs-8j-gz6"; */
 "hOs-8j-gz6.text" = " Yseconds";
 
-/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "jRl-py-hHi"; */
-"jRl-py-hHi.text" = "A. BERNARD @2018";
+/* Class = "UILabel"; text = "@ Alban BERNARD - 2018"; ObjectID = "jRl-py-hHi"; */
+"jRl-py-hHi.text" = "@ Alban BERNARD - 2018";
 
 /* Class = "UIBarButtonItem"; title = "Apps"; ObjectID = "ngt-sk-tp2"; */
 "ngt-sk-tp2.title" = "Apps";
 
-/* Class = "UILabel"; text = "We are very happy to know that you have downloaded our SIMPLE CALC application and we warmly thank you.\n\nWe also want to hear your feedback to improve this calculator.\n\nTo do this :"; ObjectID = "ohS-Gg-qcC"; */
-"ohS-Gg-qcC.text" = "We are very happy to know that you have downloaded our application\n\n>> SECRET NUMBER <<\n\n and we warmly thank you.\n\nWe also want to hear your feedback to improve this little game.\n\nTo do this :";
+/* Class = "UILabel"; text = "I am very happy to know that you have downloaded my application.\n\n --- >> SECRET NUMBER << ---- \n\n and I thank you very warmly. \n\n I would sincerely appreciate receiving your comments and requests for evolutions for this game. \n\n To do this, you can:"; ObjectID = "ohS-Gg-qcC"; */
+"ohS-Gg-qcC.text" = "I am very happy to know that you have downloaded my application.\n\n --- >> SECRET NUMBER << ---- \n\n and I thank you very warmly. \n\n I would sincerely appreciate receiving your comments and requests for evolutions for this game. \n\n To do this, you can:";
 
-/* Class = "UILabel"; text = "A. BERNARD @2018"; ObjectID = "vzk-qB-TPg"; */
-"vzk-qB-TPg.text" = "A. BERNARD @2018";
+/* Class = "UILabel"; text = "@ Alban BERNARD - 2018"; ObjectID = "vzk-qB-TPg"; */
+"vzk-qB-TPg.text" = "@ Alban BERNARD - 2018";
 
 /* Class = "UIBarButtonItem"; title = "Infos"; ObjectID = "ySf-uo-pMu"; */
 "ySf-uo-pMu.title" = "Infos";
