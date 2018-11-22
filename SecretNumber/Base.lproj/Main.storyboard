@@ -179,7 +179,7 @@
                                                 <rect key="frame" x="0.0" y="330" width="382" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great, you found it in :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMn-1w-QIz">
-                                                        <rect key="frame" x="-47.333333333333343" y="0.0" width="195" height="37"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="195" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="195" id="NfC-GT-P6T"/>
                                                         </constraints>
@@ -188,34 +188,35 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="XCheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yh-zd-bRC">
-                                                        <rect key="frame" x="155.66666666666666" y="0.0" width="70.666666666666657" height="37"/>
+                                                        <rect key="frame" x="203" y="0.0" width="30" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="VpM-7j-5da"/>
+                                                            <constraint firstAttribute="width" constant="30" id="o4s-bx-UB6"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                         <color key="textColor" red="1" green="0.25522911329999998" blue="0.30426560870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ckecks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-Zf-SeD">
-                                                        <rect key="frame" x="234.33333333333334" y="0.0" width="59.333333333333343" height="37"/>
+                                                        <rect key="frame" x="241.00000000000003" y="0.0" width="59.333333333333343" height="37"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                         <color key="textColor" red="0.95178216699999996" green="0.52952390910000002" blue="0.58036077019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in only :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-Jk-4rB">
-                                                        <rect key="frame" x="81.333333333333343" y="45" width="66.333333333333343" height="37"/>
+                                                        <rect key="frame" x="128.66666666666666" y="45" width="66.333333333333343" height="37"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                         <color key="textColor" red="0.95178216699999996" green="0.52952390910000002" blue="0.58036077019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Yseconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOs-8j-gz6">
-                                                        <rect key="frame" x="155.66666666666666" y="45" width="82" height="37"/>
+                                                        <rect key="frame" x="203" y="45" width="82" height="37"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                         <color key="textColor" red="1" green="0.25522911329999998" blue="0.30426560870000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEt-Wc-DWh">
-                                                        <rect key="frame" x="245.66666666666666" y="45" width="71.666666666666657" height="37"/>
+                                                        <rect key="frame" x="293" y="45" width="71.666666666666686" height="37"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="23"/>
                                                         <color key="textColor" red="0.95178216699999996" green="0.52952390910000002" blue="0.58036077019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -223,7 +224,6 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="hOs-8j-gz6" secondAttribute="bottom" id="1ig-f2-4xA"/>
-                                                    <constraint firstItem="2Yh-zd-bRC" firstAttribute="centerX" secondItem="Hyb-UN-8MM" secondAttribute="centerX" id="2xy-u4-pP0"/>
                                                     <constraint firstAttribute="bottom" secondItem="zEt-Wc-DWh" secondAttribute="bottom" id="5vW-Yj-Wc0"/>
                                                     <constraint firstItem="AMn-1w-QIz" firstAttribute="top" secondItem="Hyb-UN-8MM" secondAttribute="top" id="A2C-mo-qEL"/>
                                                     <constraint firstItem="zEt-Wc-DWh" firstAttribute="leading" secondItem="hOs-8j-gz6" secondAttribute="trailing" constant="8" id="GzP-mP-Whe"/>
@@ -235,6 +235,7 @@
                                                     <constraint firstItem="7cH-Zf-SeD" firstAttribute="top" secondItem="Hyb-UN-8MM" secondAttribute="top" id="c7Z-Ch-dU8"/>
                                                     <constraint firstItem="2Yh-zd-bRC" firstAttribute="leading" secondItem="AMn-1w-QIz" secondAttribute="trailing" constant="8" id="kBM-tT-0RK"/>
                                                     <constraint firstItem="zEt-Wc-DWh" firstAttribute="top" secondItem="7cH-Zf-SeD" secondAttribute="bottom" constant="8" id="qbE-y1-eqm"/>
+                                                    <constraint firstItem="AMn-1w-QIz" firstAttribute="leading" secondItem="Hyb-UN-8MM" secondAttribute="leading" id="rdW-A9-Y4p"/>
                                                     <constraint firstItem="2Yh-zd-bRC" firstAttribute="top" secondItem="Hyb-UN-8MM" secondAttribute="top" id="rwD-ZZ-nbU"/>
                                                     <constraint firstItem="BUE-Jk-4rB" firstAttribute="top" secondItem="AMn-1w-QIz" secondAttribute="bottom" constant="8" id="soi-6x-agw"/>
                                                     <constraint firstItem="hOs-8j-gz6" firstAttribute="top" secondItem="2Yh-zd-bRC" secondAttribute="bottom" constant="8" id="ug9-5l-iNo"/>
