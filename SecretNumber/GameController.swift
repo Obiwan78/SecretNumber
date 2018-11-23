@@ -60,6 +60,8 @@ class GameController {
                     GameController.MAX_VALUE = 500
             case 2: _highBoundary = 1000
                     GameController.MAX_VALUE = 1000
+            case 3: _highBoundary = 10000
+                    GameController.MAX_VALUE = 10000
             default: _highBoundary = 100
                 GameController.MAX_VALUE = 100
         }

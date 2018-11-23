@@ -115,6 +115,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         case 2 :
             ui_highBoundarieLabel.text = "1000"
             GameController.MAX_VALUE = 1000
+        case 3 :
+            ui_highBoundarieLabel.text = "10000"
+            GameController.MAX_VALUE = 1000
         default:
             ui_highBoundarieLabel.text = "100"
             GameController.MAX_VALUE = 100
