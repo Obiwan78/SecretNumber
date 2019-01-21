@@ -33,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B51563DB213956CF00E386A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		B51563DD213956D800E386A2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		B53B873E211352B700FAB8B9 /* SecretNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53B8741211352B700FAB8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -274,7 +273,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				B53B8746211352B700FAB8B9 /* Base */,
-				B51563DB213956CF00E386A2 /* en */,
 				B51563DD213956D800E386A2 /* fr */,
 			);
 			name = Main.storyboard;

@@ -18,11 +18,6 @@ class InfosViewController: UIViewController, MFMailComposeViewControllerDelegate
         ui_sendMailButton.layer.cornerRadius = 5
         ui_ourApplicationsButton.layer.cornerRadius = 5
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     @IBOutlet weak var ui_sendMailButton: UIButton!
@@ -48,8 +43,6 @@ class InfosViewController: UIViewController, MFMailComposeViewControllerDelegate
     }
     
     func testInternetAndWifiConnexion() {
-        // check internet connexion
-        // Add : testInternetAndWifiConnexion() in ViewDidLoad
         
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
@@ -97,16 +90,6 @@ class InfosViewController: UIViewController, MFMailComposeViewControllerDelegate
         present(alertController, animated: true, completion: nil)
         
     }
-    
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-//    }
     
 }
 

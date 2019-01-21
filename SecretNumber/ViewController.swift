@@ -43,12 +43,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ui_newGameButton: UIButton!
     @IBOutlet weak var ui_stopGameButton: UIButton!
     
-//    let gameStatusLabelText : String = "Essayez de retrouver le nombre mystère"//"Try to find the Mysterious Number"
-////    let gameStatusLabelText : String = NSLocalizedString("Retrouver le nombre mystère", comment: "Find the Mysterious Number")
-//    let chooseTheLevelText : String = "Choisissez le niveau de difficulté entre :"//"Choose the level between :"
-//    let firstPartText : String = "Bravo vous avez trouvez en "//"Great, You find it in "
-//    let secondPartText : String = " coups en "//" checks in "
-
 
     //-------------------------------------------------
     // Override
@@ -77,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         barwidth = self.ui_boundaryPrincipalView.bounds.width
         _gameRangeToScreenRatio = barwidth / CGFloat(GameController.MAX_VALUE - GameController.MIN_VALUE)
         // MAJ des contraintes avec mode paysage et portrait
-//        updateDisplay()
+        // updateDisplay()
         super.viewDidLayoutSubviews() // ne coute rien mais on rappelle la fonction au cas ou si Apple la modifie.
     }
 
@@ -85,7 +79,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         barwidth = self.ui_boundaryPrincipalView.bounds.width
         _gameRangeToScreenRatio = barwidth / CGFloat(GameController.MAX_VALUE - GameController.MIN_VALUE)
         // MAJ des contraintes avec mode paysage et portrait
-//        updateDisplay()
+        // updateDisplay()
         super.viewWillLayoutSubviews() // ne coute rien mais on rappelle la fonction au cas ou si Apple la modifie.
     }
  
@@ -134,80 +128,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ui_stopGameButton(_ sender: Any) {
         optionsGameMenu()
         _timer.invalidate()
-        // on cache ui_boundaryPrincipalView (aide barre horizontale) et la vue Resultat:
-//        if ui_boundaryPrincipalView.isHidden != true { // = visible
-//            UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlUp], animations: {
-//                self.ui_boundaryPrincipalView.isHidden = true
-//                self.ui_checkAndVerifyView.isHidden = true
-//                self.ui_stopGameButton.isHidden = true
-//            }, completion: nil)
-//        }
-//        self.ui_gameStatusLabel.isHidden = false
-//        self.ui_levelSegmentedControl.isHidden = false
-//        self.ui_newGameButton.isHidden = false
-        
-        
-        //            let delayInSeconds = 0.7
-        //            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds, execute: {
-        //                self.ui_gameStatusLabel.isHidden = false
-        //                self.ui_levelSegmentedControl.isHidden = false
-        //                self.ui_checkAndVerifyView.isHidden = true
-        //                self.ui_newGameButton.isHidden = false
-        //                self.ui_stopGameButton.isHidden = true
-        //                UIView.animate(withDuration: 0.7, animations: {
-        //                    self.view.layoutIfNeeded()
-        //                })
-        //            })
-        
-        //            if ui_resultView.isHidden != true {
-        //                UIView.transition(with: ui_boundaryPrincipalView, duration: 0.7, options: [.transitionCurlUp], animations: {
-        //                    self.ui_boundaryPrincipalView.isHidden = true
-        //
-        //                }, completion: nil)
-        //            }
-        
-        //            if _gameController.countCheck >= 1 {
-        //                ui_resultView.isHidden = false
-        //                ui_gameStatusLabel.isHidden = false // Choose the level between :
-        //                ui_timeCounterLabel.isHidden = true //chronometer
-        //                _timer.invalidate()
-        //                ui_checksLabel.text = "\(_gameController.countCheck)"
-        //                ui_timeLabel.text = "\(_count)"
-        //                //_timer.invalidate()
-        //            } else
-        //            {
-        //                ui_timeCounterLabel.isHidden = true
-        //                ui_gameStatusLabel.isHidden = false
-        //            }
-        
-        // ANIMATIONS DES VUES :
-        //            ui_gameStatusLabel.isHidden = false
-        //            ui_levelSegmentedControl.isHidden = false
-        //            ui_checkAndVerifyView.isHidden = true
-        //            ui_checkButton?.layer.cornerRadius = 5//ui_checkButton.frame.size.height/2
-        //            ui_newGameButton.isHidden = false
-        //            ui_boundaryBarView.isHidden = true
-        //            ui_newGameButton.setTitle("NEW GAME", for: UIControlState.normal)
-        //            ui_stopGameButton.isHidden = true
-        //            ui_resultView.isHidden = true
-        
-        //            ui_checkButton.isHidden = true
-        //            ui_guessedValueField.isHidden = true
-        //            UIView.animate(withDuration: 0.7, animations: { // anime tous les changements de layout
-        //                self.view.layoutIfNeeded()
-        //            })
-        //        }
-        //        else {
-        //            updateDisplay()
-        //        }
-        //        }
     }
     
     
     @IBAction func ui_checkValueButtonTouched() {
         if let guessText = ui_guessedValueField.text, let gessInt = Int(guessText) {
             _gameController.checkGuessedValue(gessInt)
-            ui_guessedValueField.text = "" // pareil que nil
+            ui_guessedValueField.text = ""
             updateDisplay()
         }
     }
@@ -227,7 +154,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ui_gameStatusLabel.isHidden = false
         ui_levelSegmentedControl.isHidden = false
         ui_newGameButton.isHidden = false
-        UIView.animate(withDuration: 0.5, animations: { // anime tous les changements de layout
+        // anime tous les changements de layout :
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         })
     }
@@ -251,11 +179,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ui_resultView.isHidden = false
         ui_resultView.isHidden = false
         ui_gameStatusLabel.isHidden = false // Choose the level between :
-//        ui_timeCounterLabel.isHidden = true //chronometer
         ui_checksLabel.text = "\(_gameController.countCheck)"
         ui_timeLabel.text = "\(_count)"
         _timer.invalidate()
-        UIView.animate(withDuration: 0.5, animations: { // anime tous les changements de layout
+        // anime tous les changements de layout
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         })
     }
@@ -291,8 +219,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             cs_boundarieZoneLeading.constant = CGFloat(GameController.MIN_VALUE + _gameController.lowBoundary) * _gameRangeToScreenRatio
             cs_boundarieZoneTrailing.constant = CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * _gameRangeToScreenRatio
             
-//            print("Bounds width iOS = \(self.view.bounds.width)")
-//            print("Bounds width SafeArea = \(self.view.safeAreaInsets.left)\n")
+            // print("Bounds width iOS = \(self.view.bounds.width)")
+            // print("Bounds width SafeArea = \(self.view.safeAreaInsets.left)\n")
             
             // ANIMATIONS DES VUES :
             UIView.animate(withDuration: 0.4, delay: 0.1, usingSpringWithDamping: 0.40, initialSpringVelocity: 10 ,options: [], animations: {
@@ -313,30 +241,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             if _gameController.countCheck >= 1 {
                 endGame()
-//                hiddenAll()
-//                ui_gameStatusLabel.isHidden = false
-//                ui_levelSegmentedControl.isHidden = false
-//                ui_newGameButton.isHidden = false
-//                ui_resultView.isHidden = false
-//                ui_resultView.isHidden = false
-//                ui_gameStatusLabel.isHidden = false // Choose the level between :
-//                //        ui_timeCounterLabel.isHidden = true //chronometer
-//                ui_checksLabel.text = "\(_gameController.countCheck)"
-//                ui_timeLabel.text = "\(_count)"
-//                _timer.invalidate()
-//                UIView.animate(withDuration: 0.5, animations: { // anime tous les changements de layout
-//                    self.view.layoutIfNeeded()
-//                })
             } else
             {
                 optionsGameMenu()
-//                hiddenAll()
-//                ui_gameStatusLabel.isHidden = false
-//                ui_levelSegmentedControl.isHidden = false
-//                ui_newGameButton.isHidden = false
-//                UIView.animate(withDuration: 0.5, animations: { // anime tous les changements de layout
-//                    self.view.layoutIfNeeded()
-//                })
             }
         }
     }
