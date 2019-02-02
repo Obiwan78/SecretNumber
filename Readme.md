@@ -44,6 +44,7 @@ Français / Anglais
 - Reachability (test connexion)
 - MFMailComposer
 
+Tests unitaires : vérifications d'une partie dans chaque cas de difficultés.
 
 ## Contact
 

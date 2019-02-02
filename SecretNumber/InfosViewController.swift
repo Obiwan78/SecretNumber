@@ -28,7 +28,7 @@ class InfosViewController: UIViewController, MFMailComposeViewControllerDelegate
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         
-        composeVC.setToRecipients(["contact@albanbernard.fr"])
+        composeVC.setToRecipients(["devios@albanbernard.fr"])
         composeVC.setSubject("LE NOMBRE SECRET")
         composeVC.setMessageBody("Bonjour, <BR><BR>Je vous remercie encore d'avoir pris le temps de me donner votre avis et vos commentaires. <BR>  <BR>Pour une meilleur gestion des demandes, veuillez SVP saisir les informations suivantes : <BR> - Votre type de matériel utilisé: iPhone ou iPad ?<BR> - Version d'iOS installée : <BR> <BR> Les points positifs que vous appréciez : <BR>-<BR>-<BR>-<BR><BR> Les améliorations que vous souhaiteriez voir: <BR>-<BR>-<BR>-<BR><BR>Si nécessaire, vous pouvez joindre des captures d'écrans avec des anotations.<BR> <BR>Merci pour votre soutien. <BR><BR>Alban BERNARD - LE NOMBRE SECRET <BR><BR><BR>------------------------------------------------------------<BR><BR>English Version<BR><BR>Hi,<BR><BR>I thanks you again for taking the time to give mes your opinion and comments. <BR> <BR> For a better management of requests, please enter the following information: <BR> - Your type of equipment used: iPhone or iPad? <BR> - Version of iOS installed: <BR> <BR> The positive points you like: <BR> - <BR> - <BR> - <BR> <BR> The improvements you would like to see: <BR> - <BR> - <BR> - <BR> <BR> If necessary, you can attach screenshots with anotations. <BR> <BR> Thank you for your support. <BR> <BR> The SECRET NUMBER team", isHTML: true)
         self.present(composeVC, animated: true, completion: nil)

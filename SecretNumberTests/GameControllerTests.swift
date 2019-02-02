@@ -60,16 +60,20 @@ class GameControllerTests: XCTestCase {
         XCTAssertEqual(60, gameController.highBoundary)
         
         gameController.startNewGame(withLevel: 0, withSecretNumber: 55) // New game level 0 (0-100)
-        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have been reinitialized")
         XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 0(0-100), boundaries should have benn reinitialized")
         
-        gameController.startNewGame(withLevel: 1, withSecretNumber: 55) // New game level 1 (0-500)
-        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
-        XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 1(0-500), boundaries should have benn reinitialized")
+        gameController.startNewGame(withLevel: 1, withSecretNumber: 325) // New game level 1 (0-500)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have been reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 500, "After a new game level 1(0-500), boundaries should have benn reinitialized")
         
-        gameController.startNewGame(withLevel: 2, withSecretNumber: 55) // New game level 2 (0-1000)
-        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have benn reinitialized")
-        XCTAssertEqual(GameController.MAX_VALUE, 100, "After a new game level 2(0-1000), boundaries should have benn reinitialized")
+        gameController.startNewGame(withLevel: 2, withSecretNumber: 888) // New game level 2 (0-1000)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have been reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 1000, "After a new game level 2(0-1000), boundaries should have benn reinitialized")
+        
+        gameController.startNewGame(withLevel: 3, withSecretNumber: 7798) // New game level 2 (0-10000)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have been reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, 10000, "After a new game level 2(0-10000), boundaries should have benn reinitialized")
     }
     
     
